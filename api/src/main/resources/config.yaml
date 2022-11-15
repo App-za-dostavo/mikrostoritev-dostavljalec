@@ -9,7 +9,7 @@ kumuluzee:
       port: 8080
   datasources:
     - jndi-name: jdbc/dostavljalecDS
-      connection-url: jdbc:postgresql://localhost:5432/dostavljalec
+      connection-url: jdbc:postgresql://dostavljalecservice:5432/dostavljalec
       username: postgres
       password: postgres
       max-pool-size: 20
