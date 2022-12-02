@@ -66,18 +66,18 @@ public class DeliveryPersonResource {
         if (person == null) {
             return Response.status(Response.Status.NOT_MODIFIED).build();
         }
-        return Response.status(Response.Status.OK).build();
+        return Response.status(Response.Status.OK).entity(person).build();
     }
 
     @DELETE
     @Path("{id}")
-    public Response deleteDeliveryPerson(@PathParam("id") Integer id) {
+    public Response deleteDeliveryPerson(@PathParam("id") Integer id, DeliveryPerson person) {
 
         boolean deleted = deliveryPersonBean.deleteDeliveryPerson(id);
 
         if (deleted) {
             return  Response.status(Response.Status.OK).build();
-        } else return Response.status(Response.Status.NOT_FOUND).build();
+        } else return Response.status(Response.Status.NOT_FOUND).entity(person).build();
     }
 }
 

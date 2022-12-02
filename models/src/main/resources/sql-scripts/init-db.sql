@@ -1,1 +1,1 @@
-INSERT INTO dostavljalec (firstName, lastName, meansOfTransport, availability, distance) VALUES ("admin", "admin", "car", true, 10.0)
+INSERT INTO dostavljalec (firstName, lastName, meansOfTransport, availability, distance) VALUES ('Janez', 'Novak', 'car', true, 10.0);
