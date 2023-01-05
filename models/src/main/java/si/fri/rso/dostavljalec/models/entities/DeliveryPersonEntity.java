@@ -14,21 +14,12 @@ public class DeliveryPersonEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-
-    @Column(name = "firstName")
     private String firstName;
-
-    @Column(name = "lastName")
     private String lastName;
-
-    @Column(name = "meansOfTransport")
     private String meansOfTransport;
-
-    @Column(name = "availability")
     private Boolean availability;
-
-    @Column(name = "distance")
-    private Float distance;
+    private Double latitude;
+    private Double longitude;
 
     public Integer getId() {
         return id;
@@ -70,11 +61,19 @@ public class DeliveryPersonEntity {
         this.availability = availability;
     }
 
-    public Float getDistance() {
-        return distance;
+    public Double getLatitude() {
+        return latitude;
     }
 
-    public void setDistance(Float distance) {
-        this.distance = distance;
+    public void setLatitude(Double latitude) {
+        this.latitude = latitude;
+    }
+
+    public Double getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(Double longitude) {
+        this.longitude = longitude;
     }
 }

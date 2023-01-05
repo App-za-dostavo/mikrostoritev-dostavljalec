@@ -13,7 +13,8 @@ public class DeliveryPersonConverter {
         dto.setLastName(entity.getLastName());
         dto.setMeansOfTransport(entity.getMeansOfTransport());
         dto.setAvailability(entity.getAvailability());
-        dto.setDistance(entity.getDistance());
+        dto.setLatitude(entity.getLatitude());
+        dto.setLongitude(entity.getLongitude());
 
         return dto;
     }
@@ -26,7 +27,8 @@ public class DeliveryPersonConverter {
         entity.setLastName(dto.getLastName());
         entity.setMeansOfTransport(dto.getMeansOfTransport());
         entity.setAvailability(dto.getAvailability());
-        entity.setDistance(dto.getDistance());
+        entity.setLatitude(dto.getLatitude());
+        entity.setLongitude(dto.getLongitude());
 
         return entity;
     }

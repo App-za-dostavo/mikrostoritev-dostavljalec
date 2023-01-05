@@ -13,10 +13,13 @@ import javax.persistence.TypedQuery;
 import javax.ws.rs.NotFoundException;
 import javax.ws.rs.core.UriInfo;
 import java.util.List;
+import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 @RequestScoped
 public class DeliveryPersonBean {
+
+    private Logger log = Logger.getLogger(DeliveryPersonBean.class.getName());
 
     @Inject
     private EntityManager em;

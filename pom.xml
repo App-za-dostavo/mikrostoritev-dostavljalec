@@ -23,8 +23,14 @@
 
     <kumuluzee.version>4.1.0</kumuluzee.version>
     <kumuluzee-rest.version>1.5.1</kumuluzee-rest.version>
+    <kumuluzee-cors.version>1.0.6</kumuluzee-cors.version>
     <kumuluzee-openapi-mp.version>1.4.0</kumuluzee-openapi-mp.version>
     <kumuluzee-config-mp.version>2.0.0</kumuluzee-config-mp.version>
+    <kumuluzee-health.version>2.4.4</kumuluzee-health.version>
+    <kumuluzee-metrics.version>3.0.0</kumuluzee-metrics.version>
+    <kumuluzee-config.version>1.2.0</kumuluzee-config.version>
+    <kumuluzee-logs.version>1.4.2</kumuluzee-logs.version>
+    <kumuluzee-discovery.version>1.1.1</kumuluzee-discovery.version>
     <postgresql.version>42.5.0</postgresql.version>
   </properties>
 
@@ -42,6 +48,12 @@
         <groupId>com.kumuluz.ee.rest</groupId>
         <artifactId>kumuluzee-rest-core</artifactId>
         <version>${kumuluzee-rest.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.kumuluz.ee.cors</groupId>
+        <artifactId>kumuluzee-cors</artifactId>
+        <version>${kumuluzee-cors.version}</version>
       </dependency>
 
       <dependency>
@@ -66,6 +78,36 @@
         <groupId>com.kumuluz.ee.config</groupId>
         <artifactId>kumuluzee-config-mp</artifactId>
         <version>${kumuluzee-config-mp.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.kumuluz.ee.health</groupId>
+        <artifactId>kumuluzee-health</artifactId>
+        <version>${kumuluzee-health.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.kumuluz.ee.metrics</groupId>
+        <artifactId>kumuluzee-metrics</artifactId>
+        <version>${kumuluzee-metrics.version}</version>
+      </dependency>
+
+      <dependency>
+        <artifactId>kumuluzee-config-consul</artifactId>
+        <groupId>com.kumuluz.ee.config</groupId>
+        <version>${kumuluzee-config.version}</version>
+      </dependency>
+
+      <dependency>
+        <artifactId>kumuluzee-logs-log4j2</artifactId>
+        <groupId>com.kumuluz.ee.logs</groupId>
+        <version>${kumuluzee-logs.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.kumuluz.ee.discovery</groupId>
+        <artifactId>kumuluzee-discovery-consul</artifactId>
+        <version>${kumuluzee-discovery.version}</version>
       </dependency>
 
       <dependency>

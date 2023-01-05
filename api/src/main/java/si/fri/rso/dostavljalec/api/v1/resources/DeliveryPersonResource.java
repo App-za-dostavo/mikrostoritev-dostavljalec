@@ -1,5 +1,7 @@
 package si.fri.rso.dostavljalec.api.v1.resources;
 
+import com.kumuluz.ee.cors.annotations.CrossOrigin;
+import com.kumuluz.ee.logs.cdi.Log;
 import si.fri.rso.dostavljalec.lib.DeliveryPerson;
 import si.fri.rso.dostavljalec.services.beans.DeliveryPersonBean;
 
@@ -12,10 +14,12 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriInfo;
 import java.util.List;
 
+@Log
 @ApplicationScoped
 @Path("/dostavljalec")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
+@CrossOrigin(supportedMethods = "GET, POST, PUT, HEAD, DELETE, OPTIONS")
 public class DeliveryPersonResource {
 
     @Inject
@@ -48,7 +52,7 @@ public class DeliveryPersonResource {
     @POST
     public Response createDeliveryPerson(DeliveryPerson person) {
 
-        if (person.getFirstName() == null || person.getAvailability() == null || person.getDistance() == null) {
+        if (person.getFirstName() == null || person.getAvailability() == null || person.getLatitude() == null) {
             return Response.status(Response.Status.BAD_REQUEST).build();
         } else {
             person = deliveryPersonBean.createDeliveryPerson(person);

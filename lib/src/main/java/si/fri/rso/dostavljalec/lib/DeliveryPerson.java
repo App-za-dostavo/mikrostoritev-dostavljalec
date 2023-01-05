@@ -6,7 +6,8 @@ public class DeliveryPerson {
     private String lastName;
     private String meansOfTransport;
     private Boolean availability;
-    private Float distance;
+    private Double latitude;
+    private Double longitude;
 
     public Integer getId() {
         return id;
@@ -48,11 +49,19 @@ public class DeliveryPerson {
         this.availability = availability;
     }
 
-    public Float getDistance() {
-        return distance;
+    public Double getLatitude() {
+        return latitude;
     }
 
-    public void setDistance(Float distance) {
-        this.distance = distance;
+    public void setLatitude(Double latitude) {
+        this.latitude = latitude;
+    }
+
+    public Double getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(Double longitude) {
+        this.longitude = longitude;
     }
 }
