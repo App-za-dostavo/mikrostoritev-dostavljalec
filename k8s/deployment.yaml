@@ -23,10 +23,10 @@ spec:
             - name: KUMULUZEE_DATASOURCES0_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: db-password
+                  name: db-password-dostavljalec
                   key: KUMULUZEE_DATASOURCES0_PASSWORD
           ports:
-            - containerPort: 8082
+            - containerPort: 8080
               name: server
               protocol: TCP
           livenessProbe:
@@ -51,7 +51,7 @@ metadata:
 spec:
   type: LoadBalancer
   ports:
-    - port: 8082
+    - port: 8080
       protocol: TCP
       targetPort: server
   selector:
